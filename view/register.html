@@ -1,0 +1,55 @@
+<md-content layout-fill ng-controller="loginCtrl">
+<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'login')">Akshar</h1>
+</div>
+
+</md-toolbar> <md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<md-tabs md-stretch-tabs="always" layout-fill>
+	<md-tab id="register" aria-controls="register"> <md-tab-label><label style="color:#000000;">{{"label_UserRegistration"|translate}}</label></md-tab-label>
+	<md-tab-body> <md-content layout-fill style="padding-left:10px;padding-right:10px;">
+	<div layout="column" layout-padding layout-fill >
+	<div  layout="column" layout-align="center center" style="width:100%;">
+	</div>
+	
+		<div layout="row"  layout-align="center center">
+				<i class="zmdi zmdi-account" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex> 
+					<label>{{"Label_fulName"|translate}}</label> 
+					<input name="name" ng-model="user.name" type="text"  ng-required="true"> 
+					</md-input-container>
+
+					
+		</div>
+		
+		
+		<div layout="row"  layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-phone" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex> <label>{{"label_mobileNO"|translate}}</label> <input name="mobileNo"
+					ng-model="user.mobileNo" type="number" ng-minlength="10"  ng-maxlength="10"  ng-required="true"> </md-input-container>
+		</div>
+		<div layout="row"  layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-email" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex> <label>{{"Label_Email"|translate}}</label> <input name="email"
+					ng-model="user.email" type="email"  ng-required="true"> </md-input-container>
+		</div>
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+			<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+			<md-input-container flex> <label
+				translate="Password">{{"Label_password" | translate}}</label> <input name="password"
+				ng-model="user.password" type="password" ng-minlength="1" ng-required="true"> </md-input-container>
+		</div>
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+			<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+			<md-input-container flex> <label>{{"Label_cnfpassword"|translate}}</label> <input name="cnfPassword"
+				ng-model="user.cnfpassword" type="password" ng-minlength="1"  ng-required="true"> </md-input-container>
+		</div>
+		<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="regiUser(user)" translate="Label_resister">Register</md-button>
+	</div>
+	</md-content> </md-tab-body> </md-tab>
+	</md-tabs>
+</div>
+</div>
+</md-content> </md-content>

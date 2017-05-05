@@ -1,0 +1,90 @@
+
+<md-content layout-fill ng-controller="UserLocationCntrl">
+<div ng-include="'views/toolbar1.html'"></div>
+    <md-content>
+     
+        <div  ng-cloak style="position: relative; padding-top: 65px;" layout-fill>
+	<div layout="column" layout-fill>
+        
+        <!--<md-list-item class="md-3-line" ng-repeat="user in userLocList" >-->
+
+  <div ng-show="dataFound">
+         <md-button class="md-fab md-fab-bottom-right docs-scroll-fab"
+                 docs-scroll-class="scrolling"
+                 ng-click="refreshLoc(parentUserId)"
+                 aria-label="refresh">
+        <md-tooltip md-direction="top">refresh</md-tooltip>
+        <i class="zmdi zmdi-refresh-sync"></i>
+      </md-button>
+  </div>
+
+		<table>
+         <tr ng-repeat="user in userLocList" style="overflow-wrap:  break-word" >
+           <td>
+
+<table class="borderTable">
+<tr>
+
+ <th  style="overflow-wrap:  break-word" ng-click="openChildDtls(user)">
+                {{user.userName}}
+           </th>
+           <th ng-click="showMap(user)">
+              <i class="zmdi zmdi-pin"></i>
+           </th>
+           <th ng-click="showHistory(user)">
+             History
+           </th>
+         </tr>
+
+         <tr>
+         <td colspan="3">
+           <!--<p style="word-wrap: break-word;"> {{user.mobileNO}} </p>-->
+           
+           {{user.lastAddress}}
+           {{user.userName}}
+         </td>
+         <!--<td ></td>
+           <td ></td>-->
+         </tr>
+
+
+</table>
+           </td>
+         </tr>
+          
+		</table> 
+      </div>
+    
+<!--
+         <div class="md-list-item-text"  layout="row">
+
+           <div class="md-list-item-text" layout="column">
+
+            <h2>KrishnaKant </h2>
+            
+             <p>342, revenue Nagar indore, India Worldnjbb,cdbchc,ncdhbchd,dencdhvc.kdncdbcytfbgbgbgb,gbgbgytfdfxgcgxhvchvc</p>
+            </div>
+            
+                  <div class="md-list-item-text" layout="column">
+                <i class="zmdi zmdi-pin"></i></div>
+                  <div class="md-list-item-text" layout="column">
+               History</div>
+                </div>
+
+            
+                 <div class="md-list-item-text"  layout="column">
+                    <div class="md-list-item-text" layout="column">
+             <p>342, revenue Nagar indore, India Worldnjbb,cdbchc,ncdhbchd,dencdhvc.kdncdbcytfbgbgbgb,gbgbgytfdfxgcgxhvchvc</p>
+                    </div>
+                 </div>
+           -->
+            
+         
+                <!--</md-list-item>
+        <md-divider></md-divider>
+        </table>
+      </md-list>-->
+
+      
+    </md-content>
+</md-content>

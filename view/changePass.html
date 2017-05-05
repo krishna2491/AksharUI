@@ -1,0 +1,51 @@
+<md-content layout-fill ng-controller="viewUserProfile">
+<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'login')">IFMIS</h1>
+	<span flex></span>
+</div>
+</md-toolbar>
+<md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<md-tabs md-stretch-tabs="always" layout-fill>
+		<md-tab id="changePass" aria-controls="changePass" layout-fill>
+		<md-tab-label>
+		<label style="color:#000000;">Change Password</label></md-tab-label>
+		<div></div>
+		<md-tab-body layout-fill>
+		<md-content layout-fill>
+		<div layout="column" layout-padding layout-fill style="padding-left:10px;padding-right:10px;">
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex>
+				<label	translate="Old Password">Old Password</label>
+				<input name="oldPassword" ng-model="user.oldPassword" type="password" ng-minlength="1">
+				</md-input-container>
+		</div>
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex>
+				<label	translate="New Password">New Password</label>
+				<input name="newPassword" ng-model="user.newPassword" type="password" ng-minlength="1">
+				</md-input-container>
+		</div>
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex>
+				<label	translate="Confirm Password">Confirm Password</label>
+				<input name="confPassword" ng-model="user.confPassword" type="password" ng-minlength="1">
+				</md-input-container>
+		</div>
+
+<div>
+			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="changePass(user)" translate="Update">Update</md-button>
+			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'viewUserProfile')" translate="Cancel">Cancel</md-button>
+<!--			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'register')" translate="Register">Register</md-button>
+-->
+</div>
+</div>
+		</md-content>
+	</md-tab-body>
+	</md-tab>
+</md-content> </md-content>

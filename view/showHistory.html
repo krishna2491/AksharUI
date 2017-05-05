@@ -1,0 +1,43 @@
+
+<md-content layout-fill ng-controller="HistoryCntr">
+<!--<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'viewHomePage')">Akshar</h1>
+</div>
+
+</md-toolbar>-->
+
+<div ng-include="'views/toolbar1.html'"></div>
+
+    <md-content>
+     
+        
+        <div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+<!--       
+<table>
+  <tr><th>
+     {{"label_showHistoryOF" | translate}}    {{HisUserName}}
+     </th>
+  </tr>
+</table>
+<br><br><br><br>-->
+
+<h1> {{HisUserName}}
+     </h1>
+    <md-list-item ng-repeat="user in userHistory">
+  
+   
+    <p>{{user.hours}}:{{user.timein_min}} </p>&nbsp;&nbsp;&nbsp;
+    
+    <p> {{user.lastAddress}} </p>
+  
+<md-divider></md-divider>
+  </md-list-item>
+    
+    </div>
+
+        </div>
+      
+    </md-content>
+</md-content>

@@ -1,0 +1,89 @@
+<md-content layout-fill ng-controller="loginCtrl">
+	<md-toolbar layout="row" style="position: fixed;">
+		<div class="md-toolbar-tools">
+			<!--<md-menu>
+			<md-button class="md-icon-button md-primary" aria-label="Settings" ng-click="openMenu($mdOpenMenu, $event)">
+				<md-icon md-svg-icon="images/menu.svg"></md-icon>
+			</md-button>
+				<md-button class="md-icon-button md-primary" aria-label="Settings" ng-click="openMenu($mdOpenMenu, $event)">
+				<md-icon md-svg-icon="images/menu.svg"></md-icon>
+			</md-button>
+			</md-menu>
+			<span flex></span>-->
+
+			<div class="md-toolbar-tools">
+			<md-menu>
+			<md-button class="md-icon-button md-primary" aria-label="Settings" ng-click="openMenu($mdOpenMenu, $event)">
+				<md-icon md-svg-icon="images/menu.svg"></md-icon>
+			</md-button>
+				<!--<md-button class="md-icon-button md-button md-ink-ripple" ng-click="openMenu($mdOpenMenu, $event)">
+					<i class="zmdi zmdi-globe-alt" style="font-size:25px;"></i>
+				</md-button>-->
+			<md-menu-content >
+			<md-menu>
+				<md-button class="md-icon-button md-button md-ink-ripple" ng-click="openMenu($mdOpenMenu, $event)">
+					<i class="zmdi zmdi-globe-alt" style="font-size:25px;"></i>
+				</md-button>
+				<md-menu-content width="1">
+					<md-menu-item>
+						<md-button style="color:#000000;" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">En</md-button>
+					</md-menu-item>
+					<md-menu-item>
+						<md-button style="color:#000000;" ng-click="changeLanguage('hi')" translate="BUTTON_LANG_HI">De</md-button>
+					</md-menu-item>
+				
+				</md-menu-content>
+			</md-menu>
+					<md-menu-item>
+						<md-button style="color:#000000;" ng-click="showIPConfigDialog()">
+							<i class="zmdi zmdi-portable-wifi-changes" style="font-size:25px;"></i></md-button>
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			<span flex></span>
+			<!--<h1 ng-click="goTo(this,'login')">IFMIS</h1>-->
+		</div>
+			<!--<h1 ng-click="goTo(this,'login')">IFMIS</h1>-->
+		</div>
+	</md-toolbar>
+	<!--<img ng-src="../www/images/main_hdr_pension.jpg" alt="Pension Portal" class="md-card-image" align="top">-->
+	<md-content layout-fill>
+		<div ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+			<div layout="column" layout-align="center center" layout-padding>
+				<!--<div flex-xs flex-gt-xs="50" layout="column">-->
+				<div flex layout="column">					
+					<md-card>
+						<!--<img ng-src="../www/images/main_hdr_pension.jpg" class="md-card-image" alt="Washed Out">-->
+						<label><b>{{"Label_AppName" |translate}}<b><label>
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline"></span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<div layout="row" layout-align="center center">
+								<i class="zmdi zmdi-confirmation-number" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+								<md-input-container flex> <label translate="label_mobileNO">mobile No</label>
+									<input name="mobileNo" ng-model="user.mobileNo" type="number">
+								</md-input-container>
+							</div>
+							<div layout="row" layout-align="center center" style="margin-top:-40px;">
+								<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+								<md-input-container flex>
+									<label translate="Label_password">Password</label>
+									<input name="password" ng-model="user.password" type="password" ng-minlength="1">
+								</md-input-container>
+							</div>
+						</md-card-content>
+						<md-card-actions layout="row" layout-align=" center">
+							<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="loginUser(user)" translate="Login">Login</md-button>
+							<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'register')" translate="Register">Register</md-button>
+						
+						</md-card-actions>
+
+
+					</md-card>
+			
+
+	</md-content>
+</md-content>

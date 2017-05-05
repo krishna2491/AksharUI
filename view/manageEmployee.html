@@ -1,0 +1,31 @@
+<md-content layout-fill ng-controller="manageEmpCntr">
+<div ng-include="'views/toolbar1.html'"></div>
+
+<md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<!--<md-tabs md-stretch-tabs="always" layout-fill>
+
+	</md-tabs>-->
+    <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId==1">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="mapUser(mobileNo,roleId,userId,'admin')" translate="label_MapAdmin">Map Admin</md-button>
+			
+		</div>
+        
+        <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId<3">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="mapUser(mobileNo,roleId,userId,'branch')" translate="label_MapBranchAdmin">Map Branch Admin</md-button>
+			
+		</div>
+
+         <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId<4">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="mapUser(mobileNo,roleId,userId,'NormalUser')" translate="label_MapEmplyee">Map User</md-button>
+			
+		</div>
+
+		 <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId<5">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="mapUser(mobileNo,roleId,userId,'delete')" translate="label_deleteUser">Delete User</md-button>
+			
+		</div>
+</div>
+</div>
+</md-content> </md-content>

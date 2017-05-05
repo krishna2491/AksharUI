@@ -1,0 +1,35 @@
+<md-toolbar layout="row" style="position: fixed;">
+    <div class="md-toolbar-tools toolbarapl">
+        <!--<md-button class="md-icon-button md-button md-ink-ripple" ng-click="goBack()">
+            <i class="zmdi zmdi-chevron-left" style="font-size:25px;"></i>
+        </md-button>-->
+        <h1 ng-click="goTo(this,'viewHomePage')"><i class="zmdi zmdi-home" style="font-size:25px;"></i> Akshar</h1>
+        <span flex></span>
+       
+        <md-menu>
+            <md-button class="md-icon-button md-primary" aria-label="Settings" ng-click="openMenu($mdOpenMenu, $event)">
+                <md-icon md-svg-icon="images/menu.svg"></md-icon>
+            </md-button>
+            <!--<md-button class="md-icon-button md-button md-ink-ripple" ng-click="openMenu($mdOpenMenu, $event)">
+					<i class="zmdi zmdi-globe-alt" style="font-size:25px;"></i>
+				</md-button>-->
+            <md-menu-content>
+                <md-menu>
+                    <md-button class="md-icon-button md-button md-ink-ripple" ng-click="openMenu($mdOpenMenu, $event)">
+                        <i class="zmdi zmdi-globe-alt" style="font-size:25px;"></i>
+                    </md-button>
+                    <md-menu-content width="1">
+                        <md-menu-item>
+                            <md-button style="color:#000000;text-align: right;" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">En</md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button style="color:#000000;text-align: right;" ng-click="changeLanguage('hi')" translate="BUTTON_LANG_HI">Hi</md-button>
+                        </md-menu-item>
+                        
+                    </md-menu-content>
+                </md-menu>
+                <md-button style="color:#000000;text-align: right;" ng-click="signOff()" translate="Log_Off">Sign Off</md-button>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>

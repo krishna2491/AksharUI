@@ -1,0 +1,41 @@
+<md-content layout-fill ng-controller="viewUserProfile">
+<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'login')">IFMIS</h1>
+	<span flex></span>
+</div>
+</md-toolbar>
+<md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<md-tabs md-stretch-tabs="always" layout-fill>
+		<md-tab id="changePass" aria-controls="changePass" layout-fill>
+		<md-tab-label>
+		<label style="color:#000000;">Delete Account</label></md-tab-label>
+		<div></div>
+		<div></div>
+		<md-tab-body layout-fill>
+		<md-content layout-fill>
+		<div layout="column" layout-padding layout-fill style="padding-left:10px;padding-right:10px;">
+		<label style="color:#000000;">Account wil be deleted permanently.</label></md-tab-label>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div layout="row" layout-align="center center" style="margin-top:-40px;">
+				<i class="zmdi zmdi-lock" style="margin-bottom:20px;font-size:20px;padding-right:10px;"></i>
+				<md-input-container flex>
+				<label	translate="Old Password">Password</label>
+				<input name="oldpassword" ng-model="user.oldpassword" type="password" ng-minlength="1">
+				</md-input-container>
+		</div>
+<div>
+			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="deleteAcc(user)" translate="Delete">Delete</md-button>
+			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'viewUserProfile')" translate="Cancel">Cancel</md-button>
+<!--			<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'register')" translate="Register">Register</md-button>
+-->
+</div>
+</div>
+		</md-content>
+	</md-tab-body>
+	</md-tab>
+</md-content> </md-content>

@@ -1,0 +1,33 @@
+<md-content layout-fill ng-controller="loginCtrl">
+<!--<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'view')"><i class="zmdi zmdi-home"></i>Akshar</h1>
+</div>
+
+<div class="md-toolbar-tools" style="right:align" >
+<h1 ng-click="goTo(this,'view')">logout</h1>
+</div>
+
+</md-toolbar>-->
+
+<div ng-include="'views/toolbar1.html'"></div>
+ <md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<!--<md-tabs md-stretch-tabs="always" layout-fill>
+
+	</md-tabs>-->
+    <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId<4">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="ManageEmployee(mobileNo,roleId,userId)" translate="label_manageEmp">Manage Employee</md-button>
+			
+		</div>
+        
+        <div layout="row" layout-align="center top" style="margin-top:20px;" ng-show="roleId<4">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="viewUserLocList(mobileNo,roleId,userId)" translate="label_viewEmp">View Employee</md-button>
+			
+		</div>
+
+        
+</div>
+</div>
+</md-content> </md-content>

@@ -1,0 +1,48 @@
+
+<md-content layout-fill ng-controller="manageEmpCntr">
+<!--<md-toolbar layout="row" style="position: fixed;">
+<div class="md-toolbar-tools" >
+<h1 ng-click="goTo(this,'viewHomePage')">Akshar</h1>
+</div>
+
+</md-toolbar>-->
+<div ng-include="'views/toolbar1.html'"></div>
+
+ <md-content layout-fill>
+<div  ng-cloak style="position: relative; padding-top: 56px;" layout-fill>
+	<div layout="column" layout-fill>
+		<!--<md-tabs md-stretch-tabs="always" layout-fill>
+
+	</md-tabs>-->
+    <div ng-show="action=='MapAdmin'">
+     <md-subheader class="md-no-sticky">{{"Label_toMngAdmin" | translate}}</md-subheader>
+    </div>
+    <div ng-show="action=='MapBranchAdmin'">
+     <md-subheader class="md-no-sticky">{{"Label_toMngBranchAdmin" | translate}}</md-subheader>
+    </div>
+    <div ng-show="action=='deleteUsers'">
+     <md-subheader class="md-no-sticky">{{"Label_toDeleteEmp" | translate}}</md-subheader>
+    </div>
+  <md-list-item ng-repeat="user in userList">
+    <p> {{ user.userName }} </p>
+    <p> {{ user.mobileNO}} </p>
+    <md-checkbox class="md-secondary" ng-model="user.selected"  ng-true-value="'{{user.userId}}'" ng-false-value="''"
+                id="'{{user.userId}}'"  ></md-checkbox>
+<md-divider></md-divider>
+  </md-list-item>
+
+  <div layout="row" layout-align="center top" style="margin-top:80px;" ng-show="roleId<4">
+				<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="UpdateUsers(userList,action)" translate="label_save">Map</md-button>
+        	<md-button class="md-raised md-primary" style="color:#ffffff;" ng-click="goTo(this,'manageEmp')" translate="back">back</md-button>
+			
+		</div>
+</div>
+
+
+
+   
+
+</div>
+
+
+</md-content> </md-content>
